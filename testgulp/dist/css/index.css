@@ -1,0 +1,37 @@
+body{
+    display:-webkit-box;
+    display:-moz-box;
+    display:flex;
+}
+@-webkit-keyframes move {
+    from{
+        -webkit-transform: rotateY(30deg);
+                transform: rotateY(30deg);
+    }
+    to{
+        -webkit-transform: rotateY(90deg);
+                transform: rotateY(90deg);
+    }
+}
+@-moz-keyframes move {
+    from{
+        -moz-transform: rotateY(30deg);
+             transform: rotateY(30deg);
+    }
+    to{
+        -moz-transform: rotateY(90deg);
+             transform: rotateY(90deg);
+    }
+}
+@keyframes move {
+    from{
+        -webkit-transform: rotateY(30deg);
+           -moz-transform: rotateY(30deg);
+                transform: rotateY(30deg);
+    }
+    to{
+        -webkit-transform: rotateY(90deg);
+           -moz-transform: rotateY(90deg);
+                transform: rotateY(90deg);
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{margin:0;padding:0}
+			body{
+				perspective: 500px;
+			}
+			ul li{
+				list-style: none;
+			}
+			@keyframes xuanzhuan{
+				0%{
+					transform: rotateX(0deg) rotateY(0deg);
+					}
+				50%{
+					transform: rotateX(180deg) rotateY(180deg);
+				}
+				100%{
+					transform: rotateX(360deg) rotateY(360deg);
+				}
+			}
+			ul{
+				width:500px;
+				height:500px;
+				margin:0 auto;
+				transform-style: preserve-3d;
+				animation: xuanzhuan 8s linear 0s infinite;
+			}
+			li{
+				width:200px;
+				height:200px;
+				background-color: red;
+				opacity: 0.3;
+				position:absolute;
+				margin:150px;
+				text-align: center;
+				font-size:32px;
+				color:#fff;line-height: 200px;
+			}
+			li:nth-child(1){
+				transform: translateZ(100px);
+			}
+			li:nth-child(2){
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			li:nth-child(3){
+				transform: rotateY(270deg) translateZ(100px);
+			}
+			li:nth-child(4){
+				transform: rotateY(180deg)  translateZ(100px);
+			}
+			li:nth-child(5){
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			li:nth-child(6){
+				transform: rotateX(270deg) translateZ(100px);
+			}
+			ul:hover li{
+				transition:all 2s;
+			}
+			ul:hover li:nth-child(1){
+				transform:rotateZ(180deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(2){
+				transform: rotateZ(180deg) rotateY(90deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(3){
+				transform: rotateZ(180deg) rotateY(270deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(4){
+				transform: rotateZ(180deg)  rotateY(180deg)  translateZ(200px);
+			}
+			ul:hover li:nth-child(5){
+				transform: rotateZ(180deg) rotateX(90deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(6){
+				transform: rotateZ(180deg) rotateX(270deg) translateZ(200px);
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</body>
+</html>

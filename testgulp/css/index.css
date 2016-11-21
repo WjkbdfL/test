@@ -1,0 +1,11 @@
+body{
+    display:flex;
+}
+@keyframes move {
+    from{
+        transform: rotateY(30deg);
+    }
+    to{
+        transform: rotateY(90deg);
+    }
+}
